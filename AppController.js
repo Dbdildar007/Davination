@@ -144,7 +144,6 @@ const login = async (req, resp) => {
 const ResendOTP = async (req, resp) => {
     try {
         let number = req.body.number;
-
         const otp = otpGenerator.generate(4, { upperCaseAlphabets: false, lowerCaseAlphabets: false, specialChars: false });
         client.messages
             .create({
